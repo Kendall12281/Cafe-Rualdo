@@ -469,6 +469,40 @@ h6 {
   border-bottom: 4px solid #1acc8d;
 }
 
+
+/* Products */
+
+#products h1{
+  margin: 0 0 20px 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #00AEFF;
+}
+
+.product-title{
+  /* margin: 5px 5px 20px 5px; */
+  margin: 15px;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 56px;
+  /* background: -webkit-linear-gradient(315deg,#006d32 25%,#00aeff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* color: #00FFC6; */
+}
+
+.product-title-2{
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 56px;
+  background: -webkit-linear-gradient(315deg,#006d32 25%,#00aeff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+
+
 #hero h2 {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
