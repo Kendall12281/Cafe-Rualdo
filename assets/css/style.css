@@ -339,6 +339,12 @@ h6 {
   z-index: 999;
 }
 
+.apply-background{
+  background:  linear-gradient(to left, #006d32, #00aeff);
+  background-color: black;
+  color: black;
+}
+
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
