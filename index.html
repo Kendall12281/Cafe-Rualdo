@@ -515,16 +515,16 @@
           
 
           <!-- send email -->
-          <div class="d-none d-md-block col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          <div class=" col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-            <form action="forms/contact.php" method="post" role="form"
+            <form action="#"onsubmit="sendMail(this);"
               class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico"
+                  <input type="email" class="form-control" name="email" id="from" placeholder="Correo Electronico"
                     required>
                 </div>
               </div>
@@ -532,15 +532,25 @@
                 <input type="text" class="form-control" name="_subject" id="subject" placeholder="Motivo" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" id="message" required></textarea>
               </div>
-              <div class="my-3">
+              <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div> -->
+              <!-- <div class="text-center"><button type="submit">Enviar Mensaje</button></div> -->
+              <div class="justify-content-center">
+
+                <input class="text-center" type="submit" value="Enviar Mensaje">
+                <p class="text-center mt-3" style="font-style: italic;">Al dar click en el boton de enviar mensaje se abrirá su aplicacion de correo electrónico</p>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+
             </form>
+
+
+
+          
 
           </div>
 
@@ -578,7 +588,15 @@
 
   <script>
 
-
+function sendMail(form) {
+    var link = "mailto:test@example.com"
+             + "?cc=" + encodeURIComponent(document.getElementById('from').value)
+             + "&subject=" + encodeURIComponent(document.getElementById('subject').value)
+             + "&body=" + encodeURIComponent(document.getElementById('message').value);
+    
+    window.location.href = link;
+    return false; // Prevent page refresh
+}
 
 
 

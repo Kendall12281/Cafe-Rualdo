@@ -1549,7 +1549,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form input[type=submit] {
   /* background: #1acc8d; */
   background: linear-gradient(to left, #006d32, #00aeff);
   border: 0;
