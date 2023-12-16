@@ -1909,3 +1909,94 @@ time {
 }
 
 
+footer {
+  position: relative;
+  padding: 3vw; /* Responsive padding based on the viewport width */
+  background-image: url('../footer/Arte-fondo-home.png');
+  background-size: cover;
+  background-position: top center; /* Keeps the top part of the image always in view */
+  background-repeat: no-repeat;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* Center the logo by default */
+  align-items: center; /* Vertically center the logo */
+  min-height: 20vh; /* Minimum height of the footer */
+  width: 100%;
+}
+
+.footer-logo {
+  transition: all 0.3s ease; /* Smooth transition for resizing */
+  width: 60vw;
+}
+
+/* Media query for screens that are at least 1024px wide */
+@media (min-width: 1024px) {
+  .footer-container {
+      justify-content: flex-end; /* Aligns the logo to the right side on larger screens */
+  }
+
+  .footer-logo {
+      width: 40vw; /* Adjust the logo size if needed */
+  }
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1024px) {
+  .footer-logo {
+    margin-top: 1.5rem;
+      width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    margin-top: 1.5rem;
+      width: 45vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    margin-top: 1.5rem;
+      width: 60vw;
+  }
+}
+
+.all-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../footer/fondo_solo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gif-container {
+  width: 50%;
+  /* You can adjust this to control the size of the GIF */
+  max-width: 500px;
+  /* Maximum size of the GIF */
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .gif-container {
+    width: 70%;
+    /* Larger percentage for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .gif-container {
+    width: 90%;
+    /* Even larger percentage for very small screens */
+  }
+}
+
